@@ -1,4 +1,5 @@
 def delta(a, b, c):
+    print(f"Function: {a}x^2 + {b}x + {c}")
     return (b ** 2) - (4 * a * c)
 
 def baskhara(a, b, c):
