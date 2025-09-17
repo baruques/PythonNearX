@@ -13,7 +13,7 @@ def baskhara(a, b, c):
     return root1, root2
 
 def main():
-    try:
+    try: # Input validation
         a = float(input("Type a value for A: "))
         b = float(input("Type a value for B: "))
         c = float(input("Type a value for C: "))
