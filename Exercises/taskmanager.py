@@ -1,5 +1,7 @@
+from tasks import readfile, writefile
+
 def main():
-    listadetarefas = []
+    listadetarefas = readfile("tarefas.txt")
 
     while True:
         opcaoescolhida = menu()
@@ -8,14 +10,17 @@ def main():
             vertarefas(listadetarefas)
         elif opcaoescolhida == '2':
             adicionartarefa(listadetarefas)
+            writefile("tarefas.txt", listadetarefas)  # Corrigido
         elif opcaoescolhida == '3':
             removertarefa(listadetarefas)
+            writefile("tarefas.txt", listadetarefas)  # Corrigido
         elif opcaoescolhida == '4':
             concluirtarefa(listadetarefas)
+            writefile("tarefas.txt", listadetarefas)  # Corrigido
         elif opcaoescolhida == '5':
             sair()
             break       
-        
+
 def menu() -> str:
 
     opcoesdict = {
